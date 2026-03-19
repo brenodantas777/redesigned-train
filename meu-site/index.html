@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Surpresa 💖</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #ffe6f0;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sim {
+    background: green;
+    color: white;
+}
+
+.nao {
+    background: gray;
+}
+
+.resultado {
+    display: none;
+    margin-top: 30px;
+}
+
+img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #ff1493;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Quer ver a coisa mais linda desse mundo? 😍</h1>
+
+    <button class="sim" onclick="mostrar()">Sim</button>
+    <button class="nao">Não 👍</button>
+
+    <div class="resultado" id="resultado">
+        <h2>é ela ❤</h2>
+
+        <img src="img1.jpg.jpeg">
+        <img src="img2.jpg.jpeg">
+        <img src="img3.jpg.jpeg">
+        <img src="img4.jpg.jpeg">
+    </div>
+</div>
+
+<script>
+function mostrar() {
+    document.getElementById("resultado").style.display = "block";
+}
+
+// botão "não" foge
+function fugir(btn) {
+    btn.style.position = "absolute";
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
